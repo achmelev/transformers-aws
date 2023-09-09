@@ -9,5 +9,6 @@ sudo pip3 install torch torchvision
 mkdir transformers
 cd transformers
 git clone https://github.com/achmelev/codevalidation.git
+git clone https://github.com/achmelev/pico-gpt.git
 
 
