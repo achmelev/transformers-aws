@@ -1,3 +1,3 @@
-itype = "t2.medium"
+itype = "t2.large"
 volume_size = 30
 install_script = "cpu_install.sh"
