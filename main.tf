@@ -1,20 +1,3 @@
-variable "awsprops" {
-    type = map(string)
-    default = {
-        region = "eu-central-1"
-        availability_zone = "eu-central-1a"
-        vpc = "vpc-9d0549f4"
-        #Debian original AMI
-        ami = "ami-0b0c5a84b89c4bf99"
-        #itype = "t2.medium"
-        itype = "g5.xlarge"
-        subnet = "subnet-35a4835c"
-        publicip = true
-        keyname = "Transformers"
-        secgroup = "sg-073f93f858554a0d4"
-    }
-}
-
 ####################Variablen######################
 
 variable "region" {
@@ -44,8 +27,8 @@ variable "secgroup" {
 
 variable "ami" {
   type = string
-  #Debian 11
-  default = "ami-0b0c5a84b89c4bf99"
+  #Ubuntu 22.04
+  default = "ami-04e601abe3e1a910f"
 }
 
 variable "keyname" {
@@ -63,7 +46,7 @@ variable "volume_size" {
 
 variable "instance_user" {
   type = string
-  default = "admin"
+  default = "ubuntu"
 }
 
 variable "private_key" {
