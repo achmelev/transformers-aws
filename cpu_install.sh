@@ -3,12 +3,12 @@
 sudo apt update
 sudo apt -y install software-properties-common
 sudo apt -y install git
+sudo DEBIAN_FRONTEND=noninteractive apt -y install python3-pip
+sudo apt update
 sudo apt -y install joe
-sudo apt -y install python3-pip
 sudo pip3 install torch torchvision
 mkdir transformers
 cd transformers
-git clone https://github.com/achmelev/codevalidation.git
 git clone https://github.com/achmelev/pico-gpt.git
 
 
