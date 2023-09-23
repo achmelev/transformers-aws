@@ -42,6 +42,7 @@ variable "itype" {
 
 variable "volume_size" {
   type = number
+  default = 30
 }
 
 variable "instance_user" {
@@ -56,6 +57,7 @@ variable "private_key" {
 
 variable "install_script" {
   type = string
+  default = "nothing.sh"
 }
 
 ###################################################
