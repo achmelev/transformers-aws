@@ -84,15 +84,19 @@ resource "aws_instance" "transformers" {
     volume_type = "gp2"
   }
 
-  provisioner "remote-exec" {
-    connection {
-      host        = "${self.public_dns}"
-      user        = var.instance_user
-      type        = "ssh"
-      private_key = "${file(var.private_key)}"
-      timeout     = "2m"
-    }
-    script = var.install_script
+  provisioner "local-exec" {
+    command = "sleep 10"
+  }
+
+  provisioner "local-exec" {
+    command = "scp -o StrictHostKeyChecking=accept-new -i ${var.private_key} ${var.install_script} ${var.instance_user}@${self.public_dns}:${var.install_script}"
+  }
+  provisioner "local-exec" {
+    command = "ssh -i ${var.private_key} ${var.instance_user}@${self.public_dns} \"chmod 755 ${var.install_script}\""
+  }
+
+  provisioner "local-exec" {
+    command = "ssh -i ${var.private_key} ${var.instance_user}@${self.public_dns} ./${var.install_script}"
   }
 }
 
