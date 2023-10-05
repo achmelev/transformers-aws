@@ -1,4 +1,5 @@
-#VM Type c5.large oder g5.large
-itype = "Eintragen"
-#AMI: z.B. ami-04e601abe3e1a910f - Ubuntu 22.04
-ami = "Eintragen"
+#VM Type c5.large, m5.large, g5.xlarge etc.pp 
+itype = "g5.xlarge"
+#AMI: eine bereits bestehende AMI (eigene oder öffentliche). z.B:
+#ami-0d207b4f157b261e9 - die vorbereitete g5.xlarge Installation mit CUDA und pytorch 
+ami = "ami-0d207b4f157b261e9"
