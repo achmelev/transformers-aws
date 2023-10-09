@@ -10,7 +10,8 @@ terraform apply -var-file="<var_file>" - Eine VM mit einer durch <var_file> vorg
 terraform destroy -var-file="<var_file>" - Eine VM mit einer durch <var_file> vorgegebenen Instanz anlegen
 
 <var_file>'s:
-  cpu.tfvars - EIne c5.large-Instanz mit anschließender Installation von Python, pythorch etc.
+  c5.tfvars - EIne c5.large-Instanz mit anschließender Installation von Python, pythorch etc.
+  m5.tfvars - EIne m5.large-Instanz mit anschließender Installation von Python, pythorch etc.
   gpu.tfvars - EIne g5.large-Instanz mit anschließender Installation von CUDA, Python, pythorch etc.
   ami.tfvars - EIne VM mit den in der Datei zu konfigurierenden Typ und AMI, ohne Installation. Gedacht für Tests und eigene AMIs 
 

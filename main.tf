@@ -42,7 +42,7 @@ variable "itype" {
 
 variable "volume_size" {
   type = number
-  default = 30
+  default = 40
 }
 
 variable "instance_user" {
