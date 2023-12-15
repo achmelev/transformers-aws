@@ -2,7 +2,7 @@
 - Wir nutzen Terraform zur Anlage der Training VMs
 - Zwei Konfigurationen für folgende Instanztypen:
     - c5.large - nur CPU zum Testen der Modelle etc
-    - g5.large - VM mit einem GPU fürs "richtige" Training
+    - g5.large - VM mit einer GPU fürs "richtige" Training
 
 ####Befehle
 

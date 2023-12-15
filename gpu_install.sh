@@ -14,11 +14,13 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get -y install cuda
 cd $HOME
 rm cuda-repo-ubuntu2204-12-2-local_12.2.2-535.104.05-1_amd64.deb
 #Rest
-sudo DEBIAN_FRONTEND=noninteractive apt-get -y install git
-sudo DEBIAN_FRONTEND=noninteractive apt-get -y install python3-pip
-sudo DEBIAN_FRONTEND=noninteractive apt-get -y install joe
-sudo pip3 install torch torchvision
-cd $HOME
+sudo DEBIAN_FRONTEND=noninteractive  apt-get -y install git
+sudo DEBIAN_FRONTEND=noninteractive  apt-get -y install python3-pip
+sudo DEBIAN_FRONTEND=noninteractive  apt-get -y install python3-venv
+mkdir $HOME/python
+python3 -m venv $HOME/python
+echo "PATH=$HOME/python/bin:\$PATH" >> .profile
+$HOME/python/bin/pip install torch torchvision
 mkdir transformers
 cd transformers
 git clone https://github.com/achmelev/pico-gpt.git
